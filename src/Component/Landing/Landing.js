@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from '../Partciles';
-import { HeroContainer, HeroTitle, HeroSubtitle, CTAButton } from './Landing.styles';
+import { HeroContainer, HeroTitle, HeroSubtitle, ButtonContainer, CTAButton } from './Landing.styles';
 
 const scrollToSection = () => {
   const section = document.getElementById('get-started-section');
@@ -25,15 +25,28 @@ const Landing = () => {
       >
         Get real-time feedback and optimize your resume for success.
       </HeroSubtitle>
-      <CTAButton
-        whileHover={{ scale: 1.05 }}
-        onClick={scrollToSection}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-      >
-        Get Started
-      </CTAButton>
+      
+      <ButtonContainer>
+        <CTAButton
+          whileHover={{ scale: 1.05 }}
+          onClick={scrollToSection}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          Get Started
+        </CTAButton>
+
+        <CTAButton
+          whileHover={{ scale: 1.05 }}
+          onClick={() => window.open('https://formless.ai/c/GRmYRJ2DTVdN', '_blank')}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          Join Waitlist
+        </CTAButton>
+      </ButtonContainer>
     </HeroContainer>
   );
 };

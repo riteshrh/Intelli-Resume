@@ -46,3 +46,9 @@ export const CTAButton = styled(motion.button)`
     background: #333333;
   }
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 20px; /* Space between the buttons */
+  z-index: 1;
+`;
